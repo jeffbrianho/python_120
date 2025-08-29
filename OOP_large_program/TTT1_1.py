@@ -27,7 +27,7 @@ class Square:
 
 class Board:
     def __init__(self):
-       self.squares = {key: Square() for key in range(1, 10)}
+        self.squares = {key: Square() for key in range(1, 10)}
 
     def display(self):
         print()
@@ -55,17 +55,17 @@ class Board:
         self.squares[key].marker = marker
 
     def unused_squares(self):
-        return [key 
+        return [key
                 for key, square in self.squares.items()
                 if square.is_unused()]
-     
+
     def is_full(self):
         return len(self.unused_squares()) == 0
-    
+
     def count_markers_for(self, player, keys):
         markers = [self.squares[key].marker for key in keys]
         return markers.count(player.marker)
-    
+
     def display_with_clear(self):
         clear_screen()
         print("\n")
