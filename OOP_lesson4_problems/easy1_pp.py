@@ -231,7 +231,7 @@ class Cat:
 # does in this class, and how it works.
 #  Write some code to test your theory.
 
-# cats counts will count the amount of cats created. 
+# cats counts will count the amount of cat instances created. 
 
 print(Cat._cats_count)
 cat1 = Cat('tabby')
